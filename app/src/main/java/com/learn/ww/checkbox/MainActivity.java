@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         // 初始化控件
         initControl();
-        checkedChangeListener listener = new checkedChangeListener();
+        CheckedChangeListener listener = new CheckedChangeListener();
         // 为复选框添加onChange事件监听
         chkArm.setOnCheckedChangeListener(listener);
         chkAndroid.setOnCheckedChangeListener(listener);
@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         tvChoice = findViewById(R.id.tvChoice);
     }
 
-    class checkedChangeListener implements CompoundButton.OnCheckedChangeListener {
+    class CheckedChangeListener implements CompoundButton.OnCheckedChangeListener {
 
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
